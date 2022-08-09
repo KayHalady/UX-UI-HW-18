@@ -20,7 +20,20 @@ nav{
     text-decoration: none;
     color: white;
     background-color: #FF00AE;
+    transition-duration: 0.2s;
 }
+    .button:hover{
+      background-color: #fff;
+      border: 1px solid #FF00AE;
+      color:#030E4E;
+    }
+    .button:active {
+      background-color: #FF00AE;
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.137);
+      transform: translateY (3px);
+      color: white;
+      opacity: 100;
+    }
 header{
     width: 100%;
 }
@@ -84,31 +97,11 @@ h2 {
     height: 500px;
     margin-bottom: 20px;
 }
-
-  .contact-1{
-    height: 500px;
-    background-color: #030E4E;
-    display: flex;
-    padding-left: 100px;
-  }
-  
-  .contact-1-heading{
-    font-family: sans-serif;
-    align-items: left;
-    justify-content: left;
-    display: inline-block;
-  }
-
-  .contact-image{
-    background-image: url("../Images/Contact.jpg");
-    display: inline-block;
-    justify-content: right;
-  }
-  
-  footer{
+  .footer{
     height: 200px;
     background-color: rgb(255, 255, 255);
     font-family: sans-serif;
+    display: flex;
     display: inline-block;
     justify-content: center;
     text-align: center;
@@ -122,16 +115,23 @@ h2 {
     right:0;
     z-index: 0;
   }
-  .project1{
-    background-image: url("../Images/HealingArc.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  .flex-container {
+    display: flex;
+    background-color: white;
+    padding-bottom: 20px;
   }
-
-  .project2{
-    background-image: url("../Images/OCH\ Home.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+  @media only screen and (max-width: 600px){}
+   .flex-container {
+     display: flex;
+     flex-direction: row;
+   }
+   .flex-container2 {
+    height: 500px;
+    background-color: #030E4E;
+    display: flex;
+    padding-left: 100px;
+   }
+   .flex-container2 > div {
+    background-color: none;
+    padding-left: 250px;
+   }
